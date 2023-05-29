@@ -6,7 +6,7 @@ CREATE TABLE Libros (
   idioma VARCHAR(50) CHECK (idioma REGEXP '^[[:upper:]]'),
   edicion INT,
   estado ENUM('Nuevo', 'Usado'),
-  tipo  ENUM('Libro', 'Comic'),
+  tipo  ENUM('Libro', 'Comic','Manga'),
   FOREIGN KEY (id_editorial) REFERENCES Editoriales(id_editorial)
 );
 
